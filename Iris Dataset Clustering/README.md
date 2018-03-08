@@ -10,6 +10,6 @@ PCA on X (or SVD on XX') can be used for clustering purposes. (see: http://www2.
 Multiplying the first # coeff. vectors producted by PCA (or the first # eigenvectors of SVD on XX') with the original data features
 we get them in another space which maximises in between variance. So, multiplying :
 
-                                          iris*irisSVDU(4,2) ,
+                                          iris*irisSVDU(4,2) 
                                           
 gives a 150x2 matrix which includes the 2 principal components. I save on .txt file the 2 vectors of each principal component and also the labels included on data. Sending them on matlab to use gscatter(). The result of the succeeded clustering on iris data is illustrated through "gscatplot_outs.m" on "iris_clusters.jpg" file included.
