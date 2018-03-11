@@ -36,6 +36,7 @@ int main()
 	float sam = 0.0, samCol1 = 0.0, samCol2 = 0.0, samCol3 = 0.0, samCol4 = 0.0;
 
 	getline(file,grammh);
+	// read line by line 
 	while (getline(file, grammh))
 	{
 		// next line input of Fisher.csv
@@ -43,15 +44,20 @@ int main()
 		stringstream linestream(grammh);
 		j = 0;
 		
+		// read column by column till not anymore ','
 		while (getline(linestream, value, ','))
 		{
 			cout << " " << value << " ";
 			
+			// from first column keep the value as iris kind
 			if (j == 0) {
 				float valueLabel = (float)atoi(value.c_str());
 					/* 3 iris kinds : 0 - Sentosa, 1 - Versicolor, 2 - Indica */ 
 					irisLabels(i) = valueLabel;
 			}
+			
+			// from the rest columns keep each characteristic as 
+			// PW (petal width), PL (petal length), SW (sepal width), SL (sepal length)
 			else {
 				
 				float valueFlo = (float)atoi(value.c_str());
@@ -76,7 +82,7 @@ int main()
 
 	/* ----------------------------------  Clustering using PCA via SVD ---------------------------------------------  */
 
-	/* Preprocessing: Centering Data, that is mean(iris) = 0, iris' = iris -mean(column);  */
+	/* Preprocessing: normalising data each column divided by the sum of it (eitherwise could substract the mean)  */
 	for (int i = 0; i < 150; i++) {
 		j = 0;
 		if (j == 0){
@@ -104,8 +110,11 @@ int main()
 	/* Calling Eigen's svd() for calculating eigenvectors */
 	JacobiSVD<MatrixXf> svdOfiris(irisII, ComputeFullU | ComputeFullV) ;
 	
-	// eigeniris - clusters 
-
+	// ----------------------------------- eigeniris - clusters ------------------------------------------------------------
+	
+	/** multiply original iris data by first two eigenvectors of first two highest eigenvalues respectively
+	 this results in principal components. Plotin them (on scatter plot way) will show up the clusters 
+	 of the data on the three iris kinds. */
 	const MatrixXf irisSVDU = svdOfiris.matrixU().block(0,0,4,2);
 	MatrixXf irisClust;
 	irisClust.setZero();
@@ -116,14 +125,15 @@ int main()
 	vector<float> pc2(150);
 	vector<float> labels(150);
 	for (int i = 0; i < 150; i++) {
+		// first principal component comes from first column of irisClust
 		pc1[i] = irisClust(i, 0);
+		// second principal component comes from second column of irisClust
 		pc2[i] = irisClust(i, 1);	
 		labels[i] = irisLabels(i);
 		cout << pc1[i] << "defsfrs" << pc2[i] << endl;
-
 	}
 
-	/* --------- Write output to .txt file (each output is each principal component) ---------- */
+	/* --------- Write output (pc1,pc2,labels) to .txt file (each output is each principal component) ---------- */
 	ofstream output_file("./pc1.txt");
 	ofstream output_file2("./pc2.txt");
 	ofstream output_file4("./labels.txt");
