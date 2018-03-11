@@ -1,5 +1,6 @@
 
-Implemeted on Visual Studio 2017 (thats why included targetver.h, stdafx.cpp, stdafx.h). Using Eigen Library (http://eigen.tuxfamily.org/index.php?title=Main_Page) for matrix/vector manipulation and svd operation.
+Implemeted on Visual Studio 2017 (thats why included targetver.h, stdafx.cpp, stdafx.h). Using Eigen Library (http://eigen.tuxfamily.org/index.php?title=Main_Page) for matrix/vector manipulation and svd operation. Also 
+using Matlab R2016a for the figure of gscatter plot of clustering on iris data.
 
 Clustering on data input of the "Fisher.csv" which includes 150 row data of 4 characteristics of 3 Types or Iris flower (Sentosa, Versicolor, Virginica).
 
