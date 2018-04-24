@@ -9,7 +9,7 @@ Clustering on data input of the "Fisher.csv" which includes 150 row data of 4 ch
 The first column takes values {0,1,2} in respect of kind of type. The next four columns are the characteristics, that is PW (petal width), PL (petal length), SW (sepal width), SL (sepal length).
 
 PCA on X (or SVD on XX') can be used for clustering purposes. (see: [Singular Value Decomposition and
-Principal Component Analysis](http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/4000/pdf/imm4000) , [Clustering with the SVD](http://meyer.math.ncsu.edu/Meyer/Talks/ClusteringMonopoli_9_11_07.pdf) , [he Singular Value Decomposition; Clustering](https://people.eecs.berkeley.edu/~jrs/189/lec/21.pdf) )
+Principal Component Analysis](http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/4000/pdf/imm4000) , [Clustering with the SVD](http://meyer.math.ncsu.edu/Meyer/Talks/ClusteringMonopoli_9_11_07.pdf) , [The Singular Value Decomposition; Clustering](https://people.eecs.berkeley.edu/~jrs/189/lec/21.pdf) )
 
 Multiplying the first (in this case first 2) # coeff. vectors produced by PCA (or the first # eigenvectors of SVD on XX') with the original data features
 we get them in another algebraic space which maximises in between data variance. So, multiplying :
