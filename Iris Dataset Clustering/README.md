@@ -16,4 +16,6 @@ we get them in another algebraic space which maximises in between data variance.
 
                                           iris*irisSVDU(4,2) 
                                           
-results in a 150x2 matrix which includes the 2 principal components. I save on .txt file the 2 vectors of each principal component and also the labels included on data (*"pc1.txt","pc2.txt","labels.txt"*). Reading them from matlab and then plotting them through *gscatter()*. The result of the succeeded clustering on iris data is illustrated through *"gscatplot_outs.m"* on *"iris_clusters.jpg"* file included.
+results in a 150x2 matrix which includes the 2 principal components. I save on .txt file the 2 vectors of each principal component and also the labels included on data (*"pc1.txt","pc2.txt","labels.txt"*). Reading them from matlab and then plotting them through *gscatter()*. The result of the succeeded clustering on iris data is illustrated through *"gscatplot_outs.m"* on *"iris_clusters.jpg"* file included and as shown below for the three iris categories.
+
+![Alt text](https://raw.githubusercontent.com/nikos-rvnt/Machine-Learning/master/Iris%20Dataset%20Clustering/iris_clusters.jpg "Optional title")
