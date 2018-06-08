@@ -1,6 +1,6 @@
 ## Logic Operations Implementation through Perceptron
 
-Logic Gates AND, OR, XOR are implemented through Perceptron.
+In this machine learning project logic gates AND, OR, XOR are implemented through Perceptron.
 
 Firstly, a random bernulli binary sequence of 256 bits is generated for training each logic gate, that is for optimizing the weights of perceptron for each case. Weights are initialised with values nearly zero (e.g. -0.002). The learning rate is fixed as 0.21 and a thita (θ) parameter for the perceptron gets values 1.5, 0.5, 1.0.
 
