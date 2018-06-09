@@ -16,12 +16,12 @@ In conclusion, the MSE results for training and teting are as follows :
      * Mean Square Error for the binary sequence on logic AND operation was : 0.03125
      * Mean Square Error for the binary sequence on logic OR operation is : 0.046875
      * Mean Square Error for the binary sequence on logic XOR operation is : 0.460938
-     *Mean Square Error for the binary sequence on logic (indirect) XOR operation is : 0.0859375
+     * Mean Square Error for the binary sequence on logic (indirect) XOR operation is : 0.0859375
   
   - Testing:
-     Mean Square Error for the binary sequence on logic AND operation was : 0
-     Mean Square Error for the binary sequence on logic OR operation is : 0
-     Mean Square Error for the binary sequence on logic XOR operation is : 0.5
-     Mean Square Error for the binary sequence on logic (indirect) XOR operation is : 0
+     * Mean Square Error for the binary sequence on logic AND operation was : 0
+     * Mean Square Error for the binary sequence on logic OR operation is : 0
+     * Mean Square Error for the binary sequence on logic XOR operation is : 0.5
+     * Mean Square Error for the binary sequence on logic (indirect) XOR operation is : 0
     
 Implemented on Visual Studio 2017
