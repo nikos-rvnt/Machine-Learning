@@ -8,7 +8,7 @@ As a second stage, for testing the functionality of the logic gates, a random be
 
 After each operation for the whole binary sequence, either training or testing, the MSE ( MSE = (1/Ν)Σ(y_desired - y_real)^2 ) is evaluated and printed on the screen for comparison among the logic operations through perceptron.
 
-Also and because of doubtful XOR MSE results (about 0.5), an indirect implementation of XOR is implemented by the algebra bool equation, (AND_output)' * (OR_output). This implementation gives far better results by the previous one and the reason is that it was difficult to estimate an optimum thita parameter for straight XOR operation, in order to take the best discriminant function for the results.
+Also and because of doubtful XOR MSE results (about 0.5), an indirect implementation of XOR is implemented by the algebra bool equation, (X[i] * X[i+1])' * (X[i] + X[i+1]) (or (AND_output)' * (OR_output)). This implementation gives far better results by the previous one and the reason is that it was difficult to estimate an optimum thita parameter for straight XOR operation, in order to take the best discriminant function for the results.
 
 In conclusion, the MSE results for training and teting are as follows :
 
